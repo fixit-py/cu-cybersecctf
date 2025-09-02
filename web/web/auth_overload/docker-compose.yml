@@ -1,0 +1,23 @@
+services:
+  auth-bypass-challenge:
+    build: .
+    ports:
+      - "12520:12520"
+    environment:
+      - FLASK_ENV=production
+      - FLASK_DEBUG=False
+    volumes:
+      - ./logs:/app/logs
+    restart: unless-stopped
+    healthcheck:
+      test: ["CMD", "curl", "-f", "http://localhost:12520/"]
+      interval: 30s
+      timeout: 10s
+      retries: 3
+      start_period: 40s
+    networks:
+      - challenge-network
+
+networks:
+  challenge-network:
+    driver: bridge

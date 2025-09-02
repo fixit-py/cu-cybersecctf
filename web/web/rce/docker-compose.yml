@@ -1,0 +1,26 @@
+services:
+  racecon-challenge:
+    build: .
+    ports:
+      - "20000:20000"
+    environment:
+      - FLASK_ENV=production
+      - FLASK_DEBUG=False
+      - PORT=20000
+      - SECRET_KEY=secure-banking-secret-2024
+    volumes:
+      - ./logs:/app/logs
+      - ./data:/app/data
+    restart: unless-stopped
+    healthcheck:
+      test: ["CMD", "curl", "-f", "http://localhost:20000/"]
+      interval: 30s
+      timeout: 10s
+      retries: 3
+      start_period: 40s
+    networks:
+      - racecon-network
+
+networks:
+  racecon-network:
+    driver: bridge

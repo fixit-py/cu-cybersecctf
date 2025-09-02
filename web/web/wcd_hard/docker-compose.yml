@@ -1,0 +1,26 @@
+services:
+  wcd-challenge:
+    build: .
+    ports:
+      - "3200:3200"
+    environment:
+      - FLASK_ENV=production
+      - FLASK_DEBUG=False
+      - PORT=3200
+      - SECRET_KEY=supersecretctfkey
+      - CACHE_MAX_AGE=3600
+    volumes:
+      - ./logs:/app/logs
+    restart: unless-stopped
+    healthcheck:
+      test: ["CMD", "curl", "-f", "http://localhost:3200/"]
+      interval: 30s
+      timeout: 10s
+      retries: 3
+      start_period: 40s
+    networks:
+      - wcd-network
+
+networks:
+  wcd-network:
+    driver: bridge

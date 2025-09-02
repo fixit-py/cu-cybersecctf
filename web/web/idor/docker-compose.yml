@@ -1,0 +1,26 @@
+version: '3.8'
+
+services:
+  idor-challenge:
+    build: .
+    ports:
+      - "13400:13400"
+    environment:
+      - FLASK_ENV=production
+      - FLASK_DEBUG=False
+      - PORT=13400
+    volumes:
+      - ./logs:/app/logs
+    restart: unless-stopped
+    healthcheck:
+      test: ["CMD", "curl", "-f", "http://localhost:13400/"]
+      interval: 30s
+      timeout: 10s
+      retries: 3
+      start_period: 40s
+    networks:
+      - idor-network
+
+networks:
+  idor-network:
+    driver: bridge

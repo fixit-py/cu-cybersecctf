@@ -1,0 +1,25 @@
+
+services:
+  shipfast-challenge:
+    build: .
+    ports:
+      - "12700:12700"
+    environment:
+      - FLASK_ENV=production
+      - FLASK_DEBUG=False
+      - PORT=12700
+    volumes:
+      - ./logs:/app/logs
+    restart: unless-stopped
+    healthcheck:
+      test: ["CMD", "curl", "-f", "http://localhost:12700/"]
+      interval: 30s
+      timeout: 10s
+      retries: 3
+      start_period: 40s
+    networks:
+      - shipfast-network
+
+networks:
+  shipfast-network:
+    driver: bridge
