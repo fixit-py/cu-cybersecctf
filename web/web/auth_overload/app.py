@@ -50,7 +50,7 @@ LOGIN_TEMPLATE = """
             <strong>Test accounts:</strong><br>
             user / password123<br>
             alice / alice456<br>
-            admin / admin789
+            
         </div>
     </div>
 </body>
@@ -66,7 +66,7 @@ DASHBOARD_TEMPLATE = """
         window.onload = function() {
             var isAdmin = {{ 'true' if admin_access else 'false' }};
             if (isAdmin) {
-                alert("FLAG{auth_bypass_admin_access_pwned}");
+                alert("CU{auth_bypass_admin_access_pwned}");
             } else {
                 alert("Access denied - Admin required");
             }
