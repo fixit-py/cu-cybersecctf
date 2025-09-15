@@ -1,0 +1,2 @@
+You've discovered the login portal for a corporate dashboard system that manages user access and administrative functions. The system appears to have proper authentication with different user roles, and the development team has provided test accounts for basic user access.
+The corporate security team implemented what they believed to be a robust access control system with role-based permissions. However, the web developers may have made some critical assumptions about client-side security controls and how authentication parameters are handled
