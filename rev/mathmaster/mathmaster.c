@@ -13,9 +13,9 @@ int main() {
       return 1;
     }
 
-    int result = ((input * 2) + 10) * 3;
+    long result = ((input * 2) + 10) * 3;
 
-    if (result == 12345)
+    if (result == 557155098)
       break;
 
     printf("Try harder!\n");
