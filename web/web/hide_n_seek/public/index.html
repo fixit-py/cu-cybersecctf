@@ -1,0 +1,82 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="utf-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1" />
+  <title>Welcome</title>
+  <link rel="stylesheet" href="/styles.css">
+</head>
+<body>
+  <main class="container">
+    <header>
+    <h2>My Portfolio</h2>
+    <nav>
+      <a href="#">Home</a>
+      <a href="#">Projects</a>
+      <a href="#">About</a>
+      <a href="#">Contact</a>
+    </nav>
+  </header>
+
+  <main class="container">
+    <h1>Hello, I'm... Someone?</h1>
+    <p style="text-align:center;">A passionate developer building cool stuff on the web. I think?</p>
+
+    <div class="search-bar">
+      <input type="text" placeholder="Search projects">
+      <button>Search</button>
+    </div>
+
+    <section id="about">
+      <h2>About Me</h2>
+      <p>
+        I'm a software developer interested in web development, security, and building user-friendly applications. 
+        This is just a demo portfolio page with placeholder content. STILL IN DEVELOPMENT! Maybe?
+      </p>
+    </section>
+
+    <!-- projects -->
+    <section id="projects">
+      <h2>Projects</h2>
+      <div class="projects">
+        <div class="card">
+          <h3>Project One</h3>
+          <p>A short description about the project. Just a placeholder. Perhaps.</p>
+        </div>
+        <div class="card">
+          <h3>Project Two</h3>
+          <p>Another dummy project description to make the site look filled out. Nothing to see here ;)</p>
+        </div>
+        <div class="card">
+          <h3>Project Three</h3>
+          <p>More placeholder content for the portfolio section.</p>
+        </div>
+      </div>
+    </section>
+
+    <!-- contact TODO -->
+    <section id="contact">
+      <h2>Contact</h2>
+      <p>If you'd like to get in touch, don't</p>
+    </section>
+  </main>
+
+  <footer>
+    <p>&copy; 2077 My Portfolio. All rights reserved.</p>
+  </footer>
+  </main>
+
+  <!-- I said I'm still developing my site, stop looking here. It's creeping me out... Why are you still reading. -->
+  <script>
+    (function() {
+      function getCookie(name) {
+        return document.cookie.split('; ').find(row => row.startsWith(name + '=')) || '';
+      }
+      if (!getCookie('TRACKING')) {
+        const val = Math.random().toString(36).slice(2) + Date.now().toString(36);
+        document.cookie = 'TRACKING=' + encodeURIComponent(val) + '; Path=/; SameSite=Lax';
+      }
+    })();
+  </script>
+</body>
+</html>

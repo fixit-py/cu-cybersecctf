@@ -1,0 +1,17 @@
+{
+  "name": "ctf-site",
+  "version": "1.0.0",
+  "description": "- Public site under `public/` (served statically) - Intentionally leaked database at `/public/backup/backup_users.db` - Private server-side DB copy at `/backups/acme.db` - Cookie to discover: base64 for user `Funeral` in the DB - Flag delivered via `X-CTF-Flag` header when `TRACKING` matches expected (server-side check)",
+  "main": "server.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1",
+    "start": "node server.js"
+  },
+  "keywords": [],
+  "author": "",
+  "license": "ISC",
+  "dependencies": {
+    "express": "^5.1.0",
+    "sqlite3": "^5.1.7"
+  }
+}
