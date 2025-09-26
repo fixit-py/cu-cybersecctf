@@ -3,27 +3,27 @@
 
   <!-- Homepage -->
   <url>
-    <loc>http://34.30.146.219:7000/</loc>
+    <loc>http://34.152.43.10:7000/</loc>
   </url>
 
   <!-- Personal hidden directory -->
   <url>
-    <loc>http://34.30.146.219:7000/hidden3/</loc>
+    <loc>http://34.152.43.10:7000/hidden3/</loc>
   </url>
 
   <!-- README for later -->
   <url>
-    <loc>http://34.30.146.219:7000/hidden3/README.txt</loc>
+    <loc>http://34.152.43.10:7000/hidden3/README.txt</loc>
   </url>
 
   <!-- Todo -->
   <url>
-    <loc>http://34.30.146.219:7000/hidden3/personal</loc>
+    <loc>http://34.152.43.10:7000/hidden3/personal</loc>
   </url>
   
   <!-- Flag location -->
   <url>
-    <loc>http://34.30.146.219:7000/flag.txt</loc>
+    <loc>http://34.152.43.10:7000/flag.txt</loc>
   </url>
 
 
