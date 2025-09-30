@@ -2,16 +2,16 @@ services:
   mid-challenge:
     build: .
     ports:
-      - "3000:3000"
+      - "9000:9000"
     environment:
       - NODE_ENV=production
-      - PORT=3000
+      - PORT=9000
     volumes:
       - ./logs:/app/logs
       - ./data:/app/data
     restart: unless-stopped
     healthcheck:
-      test: ["CMD-SHELL", "wget -qO- http://localhost:3000/ || exit 1"]
+      test: ["CMD-SHELL", "wget -qO- http://localhost:9000/ || exit 1"]
       interval: 30s
       timeout: 10s
       retries: 3
@@ -21,4 +21,5 @@ services:
 
 networks:
   mid-network:
+
     driver: bridge
