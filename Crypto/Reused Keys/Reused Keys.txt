@@ -1,0 +1,7 @@
+Two operatives are exchanging secret messages, but someone noticed they might be cutting corners with their encryption. You’ve intercepted two ciphertexts from their communication.
+
+Your goal is simple: figure out the message hidden in one of them.
+
+8693cf63f94e567f202fe79823f0efc204741ac0316f6c0534210639c93c3ac6 c5c6b453ad1e092d135ac3fd47afa9f2762b57f45f5e1c7058617208f9521bbb
+
+Flag format: CU{...}
