@@ -1,0 +1,9 @@
+Two developers were working on a program. One of them used a cipher to hide the secret. The other developer, not knowing a cipher had already been applied, applied another cipher on top of it.
+
+Now, neither of them can figure out the original secret… and they don’t talk anymore.
+
+Your task: Decode the final message and recover the flag.
+
+Files provided:
+
+WO{Nq1mn3x_W1jb3l_F@syl3x_4hx_M3wol3!}
